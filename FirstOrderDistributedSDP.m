@@ -33,7 +33,7 @@ for iter = 1:50
         Xall(:,:,i) = X;
     end
     res = trace(C(:,:,1)*Xall(:,:,1)+C(:,:,2)*Xall(:,:,2));
-    lambda = lambda + 2e-1*res;
+    lambda = lambda + 1e-1*res;
     res_norm(iter) = norm(res);
 end
 semilogy(res_norm)
